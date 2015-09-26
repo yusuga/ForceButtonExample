@@ -24,8 +24,9 @@
 {
     [super viewDidLoad];
     
-    ForceTapGestureRecognizer *forceTap = [[ForceTapGestureRecognizer alloc] initWithTarget:self action:@selector(forceTapped)];
+    ForceTapGestureRecognizer *forceTap = [[ForceTapGestureRecognizer alloc] initWithTarget:self action:@selector(forceTapped:)];
     forceTap.delegate = self;
+    forceTap.forceSensitivity = 0.5; // 圧力を許容する閾値。最大の圧力/forceSensitivity
     [self.button addGestureRecognizer:forceTap];
     self.forceTapGestureRecognizer = forceTap;
 }
@@ -35,9 +36,9 @@
     NSLog(@"%s", __func__);
 }
 
-- (void)forceTapped
+- (void)forceTapped:(ForceTapGestureRecognizer *)sender
 {
-    NSLog(@"%s", __func__);
+    NSLog(@"%s, Force = %f", __func__, sender.force);
 }
 
 @end

@@ -1,10 +1,10 @@
 PODS:
-  - ForceTapGestureRecognizer (0.0.1)
+  - ForceTapGestureRecognizer (0.0.2)
 
 DEPENDENCIES:
   - ForceTapGestureRecognizer
 
 SPEC CHECKSUMS:
-  ForceTapGestureRecognizer: b42bb2a3ee814b3d1d470a1a0031eaf80dd6ba63
+  ForceTapGestureRecognizer: cb6b0ebd5d1dfada732553156736d12446bbefca
 
 COCOAPODS: 0.38.0
